@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+
+# Streamlit/App data
+.streamlit/
+data_batches/
+
+# Data and temporary downloads
+*.pdf
+*.xlsx
+*.xls
+*.csv
+temp/
+tmp/

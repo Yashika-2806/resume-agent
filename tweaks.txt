@@ -1,0 +1,56 @@
+ResuGent Tweak Inventory
+
+1. Year-Specific Category Weights
+These are the default weight maps used when scoring a resume for each B.Tech year.
+- Year 2
+  - hyg: 0.25
+  - real: 0.25
+  - comp: 0.20
+  - imp: 0.05
+  - prod: 0.10
+  - clar: 0.05
+  - dom: 0.05
+  - vel: 0.05
+- Year 3
+  - hyg: 0.15
+  - real: 0.20
+  - comp: 0.25
+  - imp: 0.10
+  - prod: 0.15
+  - clar: 0.05
+  - dom: 0.05
+  - vel: 0.05
+- Year 4
+  - hyg: 0.05
+  - real: 0.10
+  - comp: 0.30
+  - imp: 0.20
+  - prod: 0.15
+  - clar: 0.05
+  - dom: 0.05
+  - vel: 0.10
+
+2. Scoring Constants
+These constants are used across the scoring pipeline and can be treated as the default baseline.
+- alpha: 5.0
+- beta: 12.0
+- omega: 15.0
+- eps: 1.0
+- tier1_c: 25
+- tier2_c: 65
+- tier3_c: 100
+- hygiene_page_pen: 50
+- hygiene_link_pen: 15
+- hygiene_email_pen: 25
+- hygiene_sec_pen: 20
+
+3. Static Role Weights
+These role multipliers are used in the velocity calculation.
+- internship: 15
+- freelance: 10
+- tech_lead: 10
+- member: 3
+
+4. Default Scoring Behavior
+- If the resume year is not found in the override map, the scorer falls back to Year 3 weights.
+- `eps` is used as a guard to prevent divide-by-zero in the realization and domain formulas.
