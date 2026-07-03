@@ -11,7 +11,7 @@ import tempfile
 import threading
 import time
 
-from utils import extract_resume_data, compute_score, download_from_gdrive, generate_score_explanation, download_gdrive_file_safe
+from utils import extract_resume_data, compute_score, download_from_gdrive, generate_score_explanation, download_gdrive_file_safe, ResumeData
 
 st.set_page_config(
     page_title="CS Resume Scorer",
