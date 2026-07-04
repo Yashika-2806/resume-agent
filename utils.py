@@ -292,8 +292,20 @@ Calculated Scores:
 """
 
     prompt = f"""You are an expert resume reviewer and career coach.
-Analyze the following resume and its calculated multi-dimensional scores, and generate a brief, professional explanation:
-1. Explain why the score is high/low in specific dimensions.
+Analyze the following resume and its calculated multi-dimensional scores, and generate a brief, professional explanation.
+
+Here is the exact definition of each scoring dimension:
+1. Structural Hygiene: Page count compliance (prefers 1 page), professional email format, and presence of core section headers.
+2. Tech Realization: Matches the declared skills list against the project descriptions. A low score (e.g. 0.0) means skills declared in the "Skills" list were never mentioned or shown in any project description.
+3. Project Complexity: Presence of advanced engineering tools (Docker, Redis, Kafka, WebSockets, cloud/infra, etc.) in projects.
+4. Metric Impact: Presence of quantifiable metrics/numbers (percentages, scaling stats, performance metrics) in descriptions.
+5. Production Readiness: Percentage of projects having public GitHub repository links and live deployment URLs (Vercel, Render, etc.).
+6. Linguistic Clarity: Deducts score for using fluff/buzzwords (e.g. passionate, results-driven, self-starter).
+7. Domain Focus: Specialization in a core domain rather than being spread too thin across disjointed tech areas.
+8. Activity Velocity: Total active duration of work/internships scaled by role level.
+
+For your feedback:
+1. Explain why the score is high/low in specific dimensions based on their definitions above. (e.g. if Tech Realization is 0.0, explain that it means the candidate's declared skills were not mentioned in their projects).
 2. Outline what is missing or what could be improved.
 3. Write in a clear, constructive tone (bullet points).
 
